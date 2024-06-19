@@ -4,17 +4,17 @@ from brain_games.cli import welcome_user
 
 
 def choose_operator():
-    my_operator = choice([{'+': operator.add}, {'-':  operator.sub}, {'*': operator.mul}])
-    
+    my_operator = choice([{'+': operator.add}, 
+                        {'-':  operator.sub}, 
+                        {'*': operator.mul}])
+
     for key, value in my_operator.items():
         operator_str = key
         opetator_func = value
 
     return operator_str, opetator_func
 
-
 def brain_calc_game():
-
     name = welcome_user()
 
     print('What is the result of the expression?')
@@ -26,7 +26,7 @@ def brain_calc_game():
         number2 = randint(1, 100)
 
         operator_str, opetator_func = choose_operator()
-        
+
         print(f'Question: {number1} {operator_str} {number2}')
 
         result = opetator_func(number1, number2)
@@ -42,11 +42,10 @@ def brain_calc_game():
                 print(f"'{answer}' is wrong answer ;(. Correct answer was '{result}'.")
                 print(f"Let's try again, {name}!")
                 break
-        except:
+        except Exception:
                 print(f"'{answer}' is wrong answer ;(. Correct answer was '{result}'.")
                 print(f"Let's try again, {name}!")
                 break
-
 
         i += 1
 

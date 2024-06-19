@@ -1,11 +1,19 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+description = "Brain Games"
+authors = ["Yaroslav Khadeev <khadeev.work@gmail.com>"]
 readme = "README.md"
 packages = [
   { include = "brain_games" },
+]
+repository = "https://github.com/khadeev/python-project-49"
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Education",
+  "License :: Proprietary",
+  "Programming Language :: Python :: 3",
+  "Private :: Do Not Upload"
 ]
 
 [tool.poetry.dependencies]
