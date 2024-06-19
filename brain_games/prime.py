@@ -1,6 +1,7 @@
 from random import randint
 from brain_games.cli import welcome_user
 
+
 def brain_prime_game():
     name = welcome_user()
 
@@ -25,11 +26,11 @@ def brain_prime_game():
 
         print('Your answer:', answer)
 
-
         if answer == result:
             print('Correct!')
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{result}'.")
+            print(f"'{answer}' is wrong answer ;(.", end=' ')
+            print(f"Correct answer was '{result}'.")
             print(f"Let's try again, {name}!")
             break
 

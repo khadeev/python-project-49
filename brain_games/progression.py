@@ -23,10 +23,9 @@ def make_progression():
 
     return result_number, new_progression
 
+
 def brain_progression_game():
-
     name = welcome_user()
-
 
     print('What number is missing in the progression?')
 
@@ -35,12 +34,12 @@ def brain_progression_game():
     while i < 3:
 
         result_number, new_progression = make_progression()
-        
-        print(f'Question:', end=' '); 
+
+        print('Question:', end=' ')
 
         for num in new_progression:
             print(num, end=' ')
-        
+
         answer = input()
 
         print('Your answer:', answer)
@@ -49,14 +48,15 @@ def brain_progression_game():
             if int(answer) == result_number:
                 print('Correct!')
             else:
-                print(f"'{answer}' is wrong answer ;(. Correct answer was '{result_number}'.")
+                print(f"'{answer}' is wrong answer ;(.", end=' ')
+                print(f"Correct answer was '{result_number}'.")
                 print(f"Let's try again, {name}!")
                 break
-        except:
-                print(f"'{answer}' is wrong answer ;(. Correct answer was '{result_number}'.")
-                print(f"Let's try again, {name}!")
-                break
-
+        except Exception:
+            print(f"'{answer}' is wrong answer ;(.", end=' ')
+            print(f"Correct answer was '{result_number}'.")
+            print(f"Let's try again, {name}!")
+            break
 
         i += 1
 

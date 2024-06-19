@@ -10,8 +10,8 @@ def find_gcd(num1, num2):
             num2 = num2 - num1
     return num2
 
-def brain_gcd_game():
 
+def brain_gcd_game():
     name = welcome_user()
 
     print('Find the greatest common divisor of given numbers.')
@@ -21,11 +21,11 @@ def brain_gcd_game():
     while i < 3:
         number1 = randint(1, 100)
         number2 = randint(1, 100)
-        
+
         print(f'Question: {number1} {number2}')
 
         result = find_gcd(number1, number2)
-        
+
         answer = input()
 
         print('Your answer:', answer)
@@ -34,14 +34,15 @@ def brain_gcd_game():
             if int(answer) == result:
                 print('Correct!')
             else:
-                print(f"'{answer}' is wrong answer ;(. Correct answer was '{result}'.")
+                print(f"'{answer}' is wrong answer ;(.", end=' ')
+                print(f"Correct answer was '{result}'.")
                 print(f"Let's try again, {name}!")
                 break
-        except:
-                print(f"'{answer}' is wrong answer ;(. Correct answer was '{result}'.")
-                print(f"Let's try again, {name}!")
-                break
-
+        except Exception:
+            print(f"'{answer}' is wrong answer ;(.", end=' ')
+            print(f"Correct answer was '{result}'.")
+            print(f"Let's try again, {name}!")
+            break
 
         i += 1
 
