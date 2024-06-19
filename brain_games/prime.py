@@ -12,7 +12,7 @@ def brain_prime_game():
     while i < 3:
         number = randint(2, 97)
 
-        print('Question: ', number)
+        print('Question:', number)
 
         divisors = 0
 
